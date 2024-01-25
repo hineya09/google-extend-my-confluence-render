@@ -39,7 +39,7 @@
                             .css({
                                 'width': '30px',
                                 'height': '30px',
-                                'background-color': '#ccccff',
+                                'background-color': '#ffffff',
                                 'border-radius': '15px',
                                 'cursor': 'pointer',
                                 'position': 'absolute',
@@ -56,7 +56,7 @@
                 $('#com-twistist-slide-toc-toggle-button')
                 .css({
                     'transform': '',
-                    'background-color': '#ccccff',
+                    'background-color': '#ffffff',
                 })
                 .animate({'left': '-55px'}, 300);
             } else {
