@@ -7,6 +7,10 @@
     // ラベルの省略表示をやめる
     $('table.metadata-summary-macro .pageLabel').css('max-width', 'none');
 
+    // ページ遷移はDOM操作しているだけみたい。ページ遷移しても追加した要素が残ってしまうので一旦消す。
+    // ページ遷移はDOM操作（？）といいつつ、拡張機能は遷移ごとに動くのでよくわからない。
+    $('#com-twistist-slide-toc').remove();
+
     // スライド目次の設定
     if ($('.table-of-contents').length > 0) {
         // 目次
