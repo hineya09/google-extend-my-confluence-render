@@ -3,7 +3,7 @@
     console.log(`updated: ${tab.url}`);
     chrome.scripting.executeScript({
         target: { tabId: tab.id, allFrames: true },
-        files: ['./jquery-2.2.0.min.js', './content_script.js'],
+        files: ['./assets/jquery-2.2.0.min.js', './content_script.js'],
     });
   }
 });

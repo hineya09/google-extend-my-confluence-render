@@ -1,7 +1,7 @@
 {
   "name": "Confluenceの自作レンダー",
   "description": "個人的にイケてないなぁと思うConfluenceの表示部分を整える",
-  "version": "0.2",
+  "version": "0.5",
   "manifest_version": 3,
   "background": {
    "service_worker": "./background.js"
@@ -13,5 +13,11 @@
   ],
   "host_permissions": [
     "https://*.atlassian.net/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
