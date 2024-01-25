@@ -50,21 +50,26 @@
                             .appendTo($slideToc);
 
         $('#com-twistist-slide-toc-toggle-button').click(e => {
-            var slideTocRight, toggleButtonLeft;
-            // スライドが開いている時
             if ($('#com-twistist-slide-toc').hasClass('open')) {
-                // 閉めたときの値を入れる
-                slideTocRight = '-415px';
-                toggleButtonLeft = '-55px';
+                // アニメーション（閉めたときの状態を設定する）
+                $('#com-twistist-slide-toc').animate({'right': '-415px'}, 300).toggleClass('open');
+                $('#com-twistist-slide-toc-toggle-button')
+                .css({
+                    'transform': '',
+                    'background-color': '#ccccff',
+                })
+                .animate({'left': '-55px'}, 300);
             } else {
-                // 開いたときの値を入れる
-                slideTocRight = '0';
-                toggleButtonLeft = '-20px';
+                // アニメーション（開いたときの状態を設定する）
+                $('#com-twistist-slide-toc').animate({'right': '0'}, 300).toggleClass('open');
+                $('#com-twistist-slide-toc-toggle-button')
+                .css({
+                    'transform': 'scale(-1, 1)',
+                    'background-color': '#ffd43b',
+                })
+                .animate({'left': '-20px'}, 300);
             }
 
-            // アニメーション
-            $('#com-twistist-slide-toc').animate({'right': slideTocRight}, 300).toggleClass('open');
-            $('#com-twistist-slide-toc-toggle-button').animate({'left': toggleButtonLeft}, 300);
         });
     }
 });
